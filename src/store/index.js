@@ -3,13 +3,18 @@ import { createStore } from 'vuex'
 const store = createStore({
     state () {
       return {
-        count: 0
+        count: 0,
+        isFullScreen:false,
       }
     },
     // 同步操作
     mutations: {
       increment (state,payload) {
         state.count += payload
+      },
+      // 鼠标滚动，设置全屏
+      setFullScreen(state,value){
+        state.isFullScreen = value
       }
     },
     // 操作方法

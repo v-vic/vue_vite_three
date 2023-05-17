@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header" :class="{hidden:store.state.isFullScreen}">
         <div class="logo" @click="router.push('/')">
             <img src="../assets/img/logo_rect.jpg" alt="logo">
         </div>
@@ -45,13 +45,9 @@
 import { useRoute, useRouter } from 'vue-router';
 import { reactive } from 'vue';
 import { ShopOutlined,UserOutlined,CarOutlined,QuestionCircleOutlined } from '@ant-design/icons-vue';
-// export default {
-//   components: {
-//     MailOutlined,
-//     AppstoreOutlined,
-//     SettingOutlined,
-//   },
-// }
+import {useStore} from 'vuex'
+
+const store = useStore()
 const router = useRouter()
 
 const data = reactive({
@@ -76,6 +72,10 @@ const onSearch = () => {
     height: 40px;
     background: #fff;
     box-shadow: 0 0 10px #ccc;
+    transition: all .5s;
+}
+.header.hidden{
+    transform: translate(0,-100%);
 }
 .logo{
     margin-right: 40px;

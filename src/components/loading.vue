@@ -1,6 +1,6 @@
 <template>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        style="margin:auto;background:#fff;display:block;" width="200px" height="200px" viewBox="0 0 100 100"
+        style="margin:auto;background:#fff;display:block;position: absolute;top: 30%;left: 43%;" width="200px" height="200px" viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid">
         <defs>
             <path id="path" d="M50 15A15 35 0 0 1 50 85A15 35 0 0 1 50 15" fill="none"></path>

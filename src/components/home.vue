@@ -34,7 +34,7 @@ const router = useRouter()
 
 <style scoped lang="less">
 .homepage {
-  padding-top: 40px;
+  // padding-top: 40px;
   height: 575px;
   position: relative;
 }
